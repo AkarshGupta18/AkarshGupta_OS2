@@ -1,0 +1,10 @@
+--- linux-5.19.9/arch/x86/entry/syscalls/syscall_64.tbl	2022-11-24 15:30:22.760001463 +0530
++++ old_kernel/linux-5.19.9/arch/x86/entry/syscalls/syscall_64.tbl	2022-11-24 20:02:03.780001203 +0530
+@@ -372,7 +372,6 @@
+ 448	common	process_mrelease	sys_process_mrelease
+ 449	common	futex_waitv		sys_futex_waitv
+ 450	common	set_mempolicy_home_node	sys_set_mempolicy_home_node
+-451	common	kernel_2Dcpy sys_kernel_2Dcpy
+ 
+ #
+ # Due to a historical design error, certain syscalls are numbered differently

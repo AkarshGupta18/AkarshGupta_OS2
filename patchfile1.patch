@@ -1,0 +1,33 @@
+--- linux-5.19.9/kernel/sys.c	2022-11-24 15:39:41.460002398 +0530
++++ old_kernel/linux-5.19.9/kernel/sys.c	2022-11-24 19:58:07.860000808 +0530
+@@ -207,30 +207,6 @@
+ 	return error;
+ }
+ 
+-
+-
+-
+-
+-
+-SYSCALL_DEFINE3(kernel_2Dcpy, float ** , dst, float **, src, int, length){
+-	length=4;
+-	float buff[4][4];
+-	if(__copy_from_user(buff, src, sizeof(buff))){
+-		return -EFAULT;}
+-	if(__copy_to_user(dst, buff, sizeof(buff))){
+-		return -EFAULT;}
+-	return 0;
+-	}
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+ SYSCALL_DEFINE3(setpriority, int, which, int, who, int, niceval)
+ {
+ 	struct task_struct *g, *p;
